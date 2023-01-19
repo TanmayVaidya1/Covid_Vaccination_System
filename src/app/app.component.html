@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3">
+      <h3>All Candidate</h3>
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-danger" *ngFor="let singlecandidate of candidateList;let index = index;">{{singlecandidate}}
+        <button type="button" class="btn btn-info btn-sm" (click)="d1Done(index)" style="margin-left: 120px;">DOSE-1 Done</button>
+        <button type="button" class="btn btn-info btn-sm" (click)="delete(index)" style="margin-top: -60px; margin-left: 230px;">Delete</button>
+      </li>
+      </ul>
+    </div>
+    <div class="col-lg-3">
+      <h3>Dose-1 Candidate</h3>
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-warning" *ngFor="let candidate of dose1;let index = index;">{{candidate}}
+          <button type="button" class="btn btn-info  btn-sm" (click)="d2Done(index)" style="margin-left: 120px;">DOSE-2 Done</button>
+          <button type="button" class="btn btn-info btn-sm" (click)="undo(index)" style="margin-top: -60px; margin-left: 230px;">Undo</button>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-3">
+      <h3>Dose-2 Candidate</h3>
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-success" *ngFor="let candidate of dose2;let index = index;">{{candidate}}
+          <button type="button" class="btn btn-info btn-sm" (click)="boosterdone(index)" style="margin-left: 120px;">DOSE-3 Done</button>
+          <button type="button" class="btn btn-info btn-sm" (click)="undo2(index)" style="margin-top:-60px;margin-left: 230px;">Undo</button>
+
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-3">
+
+    </div>
+  </div>
+</div>
